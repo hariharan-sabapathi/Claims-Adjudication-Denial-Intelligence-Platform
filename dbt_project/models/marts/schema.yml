@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: kpi_header_cards
+    description: Single-row header KPI card feed for the Power BI dashboard
+  - name: kpi_clean_claim_rate_by_provider
+    description: Clean claim rate ranked ascending (worst providers first)
+    columns:
+      - name: provider_id
+        tests: [not_null]
+  - name: kpi_ar_aging_matrix
+    description: Provider x aging bucket $ at risk, feeds the heatmap matrix visual
+    columns:
+      - name: provider_id
+        tests: [not_null]
+      - name: ar_aging_bucket
+        tests:
+          - accepted_values:
+              values: ['0-30', '31-60', '61-90', '90+']
+  - name: kpi_top_carc_denials
+    description: Top denial reasons by estimated financial loss
+    columns:
+      - name: carc_code
+        tests: [not_null]

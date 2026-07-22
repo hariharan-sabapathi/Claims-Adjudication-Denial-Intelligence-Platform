@@ -1,0 +1,16 @@
+name: 'claims_adjudication'
+version: '1.0.0'
+config-version: 2
+
+profile: 'claims_adjudication'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  claims_adjudication:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

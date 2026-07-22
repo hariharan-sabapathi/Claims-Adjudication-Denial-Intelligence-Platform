@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: claims_raw
+    database: CLAIMS_DW
+    schema: RAW
+    tables:
+      - name: fact_claims_adjudication
+        description: One row per claim (segments deduplicated), loaded by ingest_claims.py
+        columns:
+          - name: claim_id
+            tests: [not_null, unique]
+          - name: patient_id
+            tests: [not_null]
+      - name: dim_patient
+        columns:
+          - name: patient_id
+            tests: [not_null, unique]
+      - name: dim_provider
+        columns:
+          - name: provider_id
+            tests: [not_null, unique]
+      - name: dim_diagnosis
+        columns:
+          - name: diagnosis_code
+            tests: [not_null, unique]
+      - name: dim_carc_denials
+        columns:
+          - name: carc_code
+            tests: [not_null, unique]
