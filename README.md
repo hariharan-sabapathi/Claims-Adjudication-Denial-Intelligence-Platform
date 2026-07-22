@@ -1,4 +1,4 @@
-# Healthcare Insurance Claims & Denial Analytics
+# Medical Insurance Claims & Denial Analytics
 
 An end-to-end data pipeline that turns CMS Data Entrepreneurs' Synthetic Public Use File (DE-SynPUF) claims data into an executive dashboard for identifying insurance claim denial patterns and revenue-cycle bottlenecks.
 
