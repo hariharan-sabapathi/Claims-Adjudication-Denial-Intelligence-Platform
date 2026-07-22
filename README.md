@@ -1,10 +1,10 @@
 # Healthcare Claims & Denial Analytics Platform
 
-An end-to-end analytics engineering pipeline that turns CMS Data Entrepreneurs' Synthetic Public Use File (DE-SynPUF) claims data into an executive dashboard for identifying claim denial patterns and revenue-cycle bottlenecks.
+An end-to-end data pipeline that turns CMS Data Entrepreneurs' Synthetic Public Use File (DE-SynPUF) claims data into an executive dashboard for identifying insurance claim denial patterns and revenue-cycle bottlenecks.
 
 ## Business problem
 
-Claim denials and slow-paying accounts receivable are driven by adjudication issues — duplicate submissions, missing authorizations, coverage gaps — that are hard to see claim by claim, provider by provider. This project ingests CMS's synthetic inpatient/outpatient claims and beneficiary data, models them into a star schema, and surfaces them in a Power BI control tower so revenue-cycle stakeholders can rank denial reasons by financial loss, compare providers, and target the claims and processes most worth fixing.
+Insurance claims are sometimes delayed or denied because of problems like duplicate submissions, missing information, or coverage issues. Finding these problems across thousands of claims can be difficult. This project uses CMS's synthetic healthcare claims data to build a data warehouse and an interactive Power BI dashboard that helps identify the most common denial reasons, compare provider performance, and highlight where improvements can reduce delays and financial losses.
 
 ## Architecture
 
